@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Arcana Tarot</title>
+  <style>
+    body{background:#3a0000;color:#e6c9ab;font-family:sans-serif;text-align:center;padding:40px;}
+    #deck{width:300px;height:420px;margin:0 auto 30px;background:url('images/back.png')center/cover;border-radius:20px;cursor:pointer;}
+    .btn{background:#500;border:none;color:#e6c9ab;padding:15px 30px;margin:5px;border-radius:10px;cursor:pointer;}
+    #card{display:none;}
+    #card img{width:300px;height:420px;border-radius:20px;margin-bottom:20px;}
+    #card h2,p{max-width:300px;margin:0 auto 10px;}
+  </style>
+</head>
+<body>
+  <h1>LOVE ARCANA</h1>
+  <div id="deck" title="클릭해서 뽑기"></div>
+  <div id="card">
+    <img id="face">
+    <h2 id="name"></h2>
+    <p id="desc"></p>
+    <button class="btn" id="again">다시 뽑기</button>
+  </div>
+  <button class="btn" id="draw">Draw a Card</button>
+  <script>
+    const cards = [];
+    for(let i=1;i<=78;i++){
+      const no = String(i).padStart(2,'0');
+      cards.push({name:`Card ${no}`,desc:`${no}번 카드 해설`,file:`${no}.png`});
+    }
+    const deck=document.getElementById('deck'),
+          draw=document.getElementById('draw'),
+          card=document.getElementById('card'),
+          face=document.getElementById('face'),
+          nameEl=document.getElementById('name'),
+          descEl=document.getElementById('desc'),
+          again=document.getElementById('again');
+    function showDeck(){ deck.style.display='block'; draw.style.display='inline-block'; card.style.display='none'; }
+    function pick(){
+      const c=cards[Math.floor(Math.random()*cards.length)];
+      face.src='images/'+c.file; nameEl.textContent=c.name; descEl.textContent=c.desc;
+      deck.style.display='none'; draw.style.display='none'; card.style.display='block';
+    }
+    deck.onclick=pick; draw.onclick=pick; again.onclick=showDeck;
+    showDeck();
+  </script>
+</body>
+</html>
