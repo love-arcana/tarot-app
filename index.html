@@ -4,13 +4,60 @@
   <meta charset="UTF-8">
   <title>Love Arcana Tarot</title>
   <style>
-    body{background:#3a0000;color:#e6c9ab;font-family:sans-serif;text-align:center;padding:40px;}
-    #deck{width:300px;height:420px;margin:0 auto 30px;background:url('images/back.png')center/cover;border-radius:20px;cursor:pointer;}
-    .btn{background:#500;border:none;color:#e6c9ab;padding:15px 30px;margin:5px;border-radius:10px;cursor:pointer;}
-    #card{display:none;}
-    #card img{width:300px;height:420px;border-radius:20px;margin-bottom:20px;}
-    #card h2,p{max-width:300px;margin:0 auto 10px;}
-  </style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #3a0000;
+    color: #e6c9ab;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+  #deck {
+    width: 70%;
+    max-width: 300px;
+    aspect-ratio: 300 / 420;
+    margin: 0 auto 1.5rem;
+    background: url('images/back.png') center/cover no-repeat;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .btn {
+    background: #500;
+    border: none;
+    color: #e6c9ab;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+  }
+  #card {
+    display: none;
+    text-align: center;
+  }
+  #card img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  #card h2 {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin-bottom: 1rem;
+  }
+  #card p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.4;
+    max-width: 90%;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+  }
+</style>
 </head>
 <body>
   <h1>LOVE ARCANA</h1>
