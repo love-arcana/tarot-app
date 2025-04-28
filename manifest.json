@@ -1,15 +1,17 @@
 {
+  "id": "/",
   "name": "Love Arcana Tarot",
   "short_name": "LoveArcana",
   "description": "이 카드로 사랑의 인사이트를 얻어보세요.",
   "start_url": ".",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#3a0000",
   "theme_color": "#3a0000",
   "icons": [
     {
-      "src": "images/back.png",
-      "sizes": "192x192",
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
