@@ -64,11 +64,28 @@
     margin: 0 auto 1.5rem;
     text-align: center;
   }
+.support-btn {
+  display: inline-block;
+  background: #c53849;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;       /* 크기 줄이기 */
+  font-size: 0.9rem;           /* 글씨 작게 */
+  border-radius: 0.6rem;
+  position: fixed;             /* 화면에 고정 */
+  bottom: 1rem;                /* 아래에서 1rem 위 */
+  left: 50%;                   /* 가로 중앙 */
+  transform: translateX(-50%); /* 중앙 보정 */
+  z-index: 1000;               /* 다른 요소 위 */
+}
 </style>
 </head>
 <body>
   <h1>LOVE ARCANA</h1>
 <p class="prompt">마음속 궁금한 질문을 떠올리며 카드를 뽑아 보세요.</p>
+<a href="https://tumblbug.com/lovetarotcard" target="_blank" class="btn support-btn">
+  텀블벅에서 펀딩 참여하기
+</a>
   <div id="deck" title="클릭해서 뽑기"></div>
   <div id="card">
     <img id="face">
